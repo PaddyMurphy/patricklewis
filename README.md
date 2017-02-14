@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# Basic build system for prototyping
 
-You can use the [editor on GitHub](https://github.com/PaddyMurphy/patricklewis/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+npm install and start working. Read the package.json for more info. Based on the [npm-build-boilerplate](https://github.com/damonbauer/npm-build-boilerplate)</a>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Provides:
 
-### Markdown
+- node-sass (sass support)
+- autoprefixer (write css without prefixes)
+- eslint (checks js errors)
+- eslint plugins to enable sublimetext highlighting)
+- browser-sync (localhost watches for changes to css & js)
+- imagemin (comress all images & svgs)
+- uglifyjs (concats and compresses everything in /js)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+To seamlessly deploy both master and gh-pages branch with 'git push'. Add this to your .git config [remote "origin"]
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PaddyMurphy/patricklewis/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+push = +refs/heads/master:refs/heads/gh-pages
+push = +refs/heads/master:refs/heads/master
+```
