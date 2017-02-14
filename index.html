@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Basic build system for prototyping</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+	<h1>Basic build system for prototyping</h1>
+
+	<p>npm install and start working. Read the package.json for more info. Based on the <a href="https://github.com/damonbauer/npm-build-boilerplate">npm-build-boilerplate</a></p>
+
+	<h2>Provides:</h2>
+
+	<ul>
+		<li>node-sass (sass support)</li>
+		<li>autoprefixer (write css without prefixes)</li>
+		<li>eslint (checks js errors)</li>
+		<li>eslint plugins to enable sublimetext highlighting)</li>
+		<li>browser-sync (localhost watches for changes to css & js)</li>
+		<li>imagemin (comress all images & svgs)</li>
+		<li>uglifyjs (concats and compresses everything in /js)</li>
+	</ul>
+
+	<p>To seamlessly deploy both master and gh-pages branch with 'git push'. Add this to your .git config [remote "origin"]</p>
+
+	<pre>
+	<code>
+		push = +refs/heads/master:refs/heads/gh-pages
+		push = +refs/heads/master:refs/heads/master
+	</code>
+	</pre>
+
+	<script src="dist/js/app.min.js"></script>
+</body>
+</html>
