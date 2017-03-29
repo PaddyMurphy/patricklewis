@@ -1,1 +1,0 @@
-console.log("basic build system");

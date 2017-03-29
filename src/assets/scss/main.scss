@@ -1,0 +1,110 @@
+@import 'reset';
+@import 'variables';
+
+h1, h2, h3,
+.tagline,
+.nav {
+  font-family: Merriweather, serif;
+}
+
+body {
+  background-color: $color-content;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.nav {
+
+}
+
+.photo {
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url('../../static/img/mt-shuksan.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+}
+
+.hero {
+  background: rgba(29, 48, 90, 0.5);
+  color: rgba(255,255,255,0.9);
+  padding: 2em;
+  transition: all 0.3s;
+}
+// override Stickyheader css
+.hero[style*="position: fixed"] {
+  font-size: 55%;
+  left: 0 !important;
+}
+
+.title {
+  font-size: 3em;
+  margin: 0 0 0.2em;
+}
+
+.tagline {
+  font-size: 1.5em;
+}
+
+.content {
+  background-color: $color-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-container {
+  flex: 1 0 230px;
+}
+
+// TODO: width is 100% when not fixed
+.nav {
+  margin: 5em 0 0 1em;
+  transition: all 0.2s;
+  top: 60px;
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5em;
+    transition: all 0.25s;
+
+    &:link {
+      border-bottom: 2px solid transparent;
+      font-weight: bold;
+      color: rgba(0,0,0,0.9);
+    }
+    &:visited {
+      color: rgba(0,0,0,0.9);
+    }
+    &:hover {
+      // background: #cecdc9;
+      // border-bottom: 2px solid #cecdc9;
+    }
+  }
+
+  // li.active a {
+  //   font-weight: bold;
+  // }
+
+  // override Stickyheader css
+  &[style*="position: fixed"] {
+    left: 0 !important;
+  }
+}
+
+.sections {
+
+}
+
+.section {
+  margin: 5em 0 0;
+  padding: 0 10vw 0 0;
+}
+
+

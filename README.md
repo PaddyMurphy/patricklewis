@@ -1,20 +1,21 @@
-# Basic build system for prototyping
+# patricklewis
 
-npm install and start working. Read the package.json for more info. Based on the [npm-build-boilerplate](https://github.com/damonbauer/npm-build-boilerplate)</a>
+> A Vue.js project
 
-## Provides:
+## Build Setup
 
-- node-sass (sass support)
-- autoprefixer (write css without prefixes)
-- eslint (checks js errors)
-- eslint plugins to enable sublimetext highlighting)
-- browser-sync (localhost watches for changes to css & js)
-- imagemin (comress all images & svgs)
-- uglifyjs (concats and compresses everything in /js)
+``` bash
+# install dependencies
+npm install
 
-To seamlessly deploy both master and gh-pages branch with 'git push'. Add this to your .git config [remote "origin"]
+# serve with hot reload at localhost:8080
+npm run dev
 
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
-push = +refs/heads/master:refs/heads/gh-pages
-push = +refs/heads/master:refs/heads/master
-```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
