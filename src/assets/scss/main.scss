@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'variables';
+@import 'photos';
 
 h1, h2, h3,
 .tagline,
@@ -8,7 +9,7 @@ h1, h2, h3,
 }
 
 body {
-  background-color: $color-content;
+  background-color: #000;
 }
 
 .container {
@@ -19,23 +20,12 @@ body {
 
 }
 
-.photo {
-  align-items: center;
-  background-attachment: fixed;
-  background-image: url('../../static/img/mt-shuksan.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  height: 80vh;
-  justify-content: center;
-}
-
 .hero {
   background: rgba(29, 48, 90, 0.5);
   color: rgba(255,255,255,0.9);
   padding: 2em;
   transition: all 0.3s;
+  z-index: 10;
 }
 // override Stickyheader css
 .hero[style*="position: fixed"] {
@@ -56,6 +46,8 @@ body {
   background-color: $color-content;
   display: flex;
   flex-direction: row;
+  position: relative;
+  z-index: 100;
 }
 
 .nav-container {
@@ -87,10 +79,6 @@ body {
       // border-bottom: 2px solid #cecdc9;
     }
   }
-
-  // li.active a {
-  //   font-weight: bold;
-  // }
 
   // override Stickyheader css
   &[style*="position: fixed"] {

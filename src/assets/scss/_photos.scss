@@ -1,0 +1,120 @@
+.photo {
+  align-items: center;
+  // background-attachment: fixed;
+  // background-image: url('../../static/img/mt-shuksan.jpg');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.photo-slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: fixed;
+  width: 100vw;
+}
+
+// slideshow
+// background-image is set in Container.vue
+// https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
+.photo-slideshow {
+    position: fixed;
+    width: 100vw;
+    height: 80vh;
+    z-index: 0;
+}
+
+.photo-slideshow-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    backface-visibility: hidden;
+    animation: imageAnimation 72s linear infinite 0s;
+}
+.photo-title-container {
+    z-index: 1000;
+    position: absolute;
+    top: 2.5em;
+    right: 3em;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 72s linear infinite 0s;
+}
+.photo-title-container h3 {
+    font-size: 0.8em;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    margin: 0;
+}
+.photo-slideshow li:nth-child(1) .photo-slideshow-img {}
+.photo-slideshow li:nth-child(2) .photo-slideshow-img {
+    // background-image set in Container.vue
+    animation-delay: 12s;
+}
+.photo-slideshow li:nth-child(3) .photo-slideshow-img {
+    // background-image set in Container.vue
+    animation-delay: 24s;
+}
+.photo-slideshow li:nth-child(4) .photo-slideshow-img {
+    // background-image set in Container.vue
+    animation-delay: 36s;
+}
+.photo-slideshow li:nth-child(5) .photo-slideshow-img {
+    // background-image set in Container.vue
+    animation-delay: 48s;
+}
+.photo-slideshow li:nth-child(6) .photo-slideshow-img {
+    // background-image set in Container.vue
+    animation-delay: 60s;
+}
+.photo-slideshow li:nth-child(2) .photo-title-container {
+    animation-delay: 12s;
+}
+.photo-slideshow li:nth-child(3) .photo-title-container {
+    animation-delay: 24s;
+}
+.photo-slideshow li:nth-child(4) .photo-title-container {
+    animation-delay: 36s;
+}
+.photo-slideshow li:nth-child(5) .photo-title-container {
+    animation-delay: 48s;
+}
+.photo-slideshow li:nth-child(6) .photo-title-container {
+    animation-delay: 60s;
+}
+/* Animation for the slideshow images */
+@keyframes imageAnimation {
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    4% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/* Animation for the title */
+@keyframes titleAnimation {
+    0% { opacity: 0 }
+    4% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/* Show at least something when animations not supported */
+.no-cssanimations .photo-slideshow-img {
+  opacity: 1;
+}
