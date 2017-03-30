@@ -8,7 +8,7 @@
 
       <ul class="photo-slideshow">
         <li class="photo-slide photo-slide--start">
-          <span class="photo-slideshow-img" v-bind:style="{ backgroundImage: 'url(' + startPhoto.src + ')' }"></span>
+          <span class="photo-slideshow-img" :style="{ backgroundImage: 'url(' + startPhoto.src + ')' }"></span>
           <div class="photo-title-container">
             <h3>{{startPhoto.title}}</h3>
           </div>
@@ -85,28 +85,28 @@ export default {
     return {
       startPhoto: {
         'title': 'Mt Shucksan, Washington',
-        'src': '/static/img/mt-shuksan.jpg'
+        'src': 'static/img/mt-shuksan.jpg'
       },
       photos: [
         {
           'title': 'Jacobs Well, Texas',
-          'src': '/static/img/jacobs-well.jpg'
+          'src': 'static/img/jacobs-well.jpg'
         },
         {
           'title': 'Bugaboo Spire, Canada',
-          'src': '/static/img/bugaboo-spire.jpg'
+          'src': 'static/img/bugaboo-spire.jpg'
         },
         {
           'title': 'Snowpatch Spire, Canada',
-          'src': '/static/img/bugaboo-spire-2.jpg'
+          'src': 'static/img/bugaboo-spire-2.jpg'
         },
         {
           'title': 'Devils River, Texas',
-          'src': '/static/img/devils-river.jpg'
+          'src': 'static/img/devils-river.jpg'
         },
         {
           'title': 'America, USA',
-          'src': '/static/img/america.jpg'
+          'src': 'static/img/america.jpg'
         }
       ]
     }
