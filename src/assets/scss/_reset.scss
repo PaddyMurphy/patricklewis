@@ -9,7 +9,7 @@ html {
   box-sizing: inherit;
 }
 
-html, body, ul, ol, li, form, fieldset, legend
+html, body, li, form, fieldset, legend
 {
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@ fieldset,img { border: 0; }
 
 legend { color: #000; }
 
-li { list-style: none; }
+// li { list-style: none; }
 
 sup { vertical-align: text-top; }
 

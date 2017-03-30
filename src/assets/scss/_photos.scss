@@ -24,10 +24,12 @@
 // background-image is set in Container.vue
 // https://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/
 .photo-slideshow {
-    position: fixed;
-    width: 100vw;
-    height: 80vh;
-    z-index: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100vw;
+  height: 80vh;
+  z-index: 0;
 }
 
 .photo-slideshow-img {
