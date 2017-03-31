@@ -106,12 +106,11 @@ export default {
   },
   mounted () {
     var that = this;
-
-    this.$nextTick(() => {
-      window.setTimeout(function () {
+    window.setTimeout(function () {
+      that.$nextTick(() => {
         that.fetchImage();
-      }, this.delay);
-    })
+      })
+    }, this.delay);
   }
 }
 </script>

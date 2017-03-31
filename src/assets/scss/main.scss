@@ -1,11 +1,13 @@
 @import 'reset';
 @import 'variables';
 @import 'photos';
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 h1, h2, h3,
 .tagline,
 .nav {
   font-family: Merriweather, serif;
+  font-weight: normal;
 }
 
 h1, h2 {
@@ -25,8 +27,8 @@ body {
 }
 
 .hero {
-  background: rgba(29, 48, 90, 0.5);
-  color: rgba(255,255,255,0.9);
+  background: $color-hero;
+  color: rgba(255,255,255,0.85);
   padding: 2em;
   transition: all 0.3s;
   z-index: 10;
@@ -61,7 +63,7 @@ body {
 .nav {
   display: inline-block;
   list-style: none;
-  margin: 5em 0 0 3em;
+  margin: 4em 0 0 3em;
   padding: 0;
   top: 60px;
   transition: all 0.2s;
@@ -70,11 +72,10 @@ body {
     display: block;
     text-decoration: none;
     padding: 0.5em;
-    transition: all 0.25s;
+    transition: all 0.4s;
 
     &:link {
       border-bottom: 2px solid transparent;
-      font-weight: bold;
       color: rgba(0,0,0,0.9);
     }
     &:visited {
@@ -83,9 +84,7 @@ body {
     &:hover {
       // background: #cecdc9;
       border-bottom: 2px solid #cecdc9;
-    }
-    &.router-link-active {
-      // border-bottom: 2px solid #cecdc9;
+      color: #000;
     }
   }
 
@@ -106,7 +105,7 @@ body {
 }
 
 .section {
-  margin: 5em 0 0;
+  margin: 4em 0 0;
   padding: 0 10vw 0 0;
 }
 
@@ -116,3 +115,54 @@ footer {
   padding: 1em;
   text-align: right;
 }
+
+// wallop slider in case study
+.Wallop-buttonNext,
+.Wallop-buttonPrevious {
+  border: none;
+  background: rgba(0,0,0,0.1);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-indent: -9999px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.25s;
+  z-index: 9;
+
+  &:hover {
+    background: rgba(0,0,0,0.15);
+  }
+}
+
+.Wallop-buttonNext:before,
+.Wallop-buttonPrevious:before {
+  color: $color-hero;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-indent: 0;
+  font-size: 25px;
+  line-height: 0;
+}
+
+.Wallop-buttonNext:before {
+  content: "\276F";
+}
+
+.Wallop-buttonPrevious:before {
+  content: "\276E";
+}
+
+.Wallop-buttonPrevious {
+  left: 1pc;
+}
+
+.Wallop-buttonNext {
+  right: 1pc;
+}
+

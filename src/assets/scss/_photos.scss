@@ -1,21 +1,16 @@
 .photo {
+  // animation: photoAnimation 1s forwards 2s;
   align-items: center;
-  // background-attachment: fixed;
-  // background-image: url('../../static/img/mt-shuksan.jpg');
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
   display: flex;
-  height: 80vh;
+  height: $photo-height-end;
   justify-content: center;
-  transition: all 0.3s;
 }
 
 .photo-slide {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: $photo-height-end;
   position: fixed;
   width: 100vw;
 }
@@ -28,7 +23,7 @@
   padding: 0;
   position: fixed;
   width: 100vw;
-  height: 80vh;
+  height: $photo-height-end;
   z-index: 0;
 }
 
@@ -107,6 +102,7 @@
     25% { opacity: 0 }
     100% { opacity: 0 }
 }
+
 /* Animation for the title */
 @keyframes titleAnimation {
     0% { opacity: 0 }
@@ -115,6 +111,12 @@
     19% { opacity: 0 }
     100% { opacity: 0 }
 }
+
+@keyframes photoAnimation {
+  0% { height: $photo-height-start }
+  100% { height: $photo-height-end }
+}
+
 
 /* Show at least something when animations not supported */
 .no-cssanimations .photo-slideshow-img {

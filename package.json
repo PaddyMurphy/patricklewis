@@ -10,10 +10,12 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "blazy": "^1.8.2",
     "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "sticky-header": "^0.3.0",
     "vue": "^2.2.2",
-    "vue-router": "^2.2.0"
+    "vue-router": "^2.2.0",
+    "wallop": "^2.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
