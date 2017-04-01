@@ -1,6 +1,6 @@
 <!-- https://github.com/darrynten/vue-lazy-background-images -->
 <template>
-  <li>
+  <div class="Wallop-item">
     <span
       class="photo-slideshow-img"
       :class="[imageClass, imageState]"
@@ -12,7 +12,7 @@
     <div class="photo-title-container">
       <h3>{{imageTitle}}</h3>
     </div>
-  </li>
+  </div>
 </template>
 
 <script>

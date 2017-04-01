@@ -6,24 +6,28 @@
         <span class="tagline">User Experience Developer</span>
       </div>
 
-      <ul class="photo-slideshow">
-        <li class="photo-slide photo-slide--start">
-          <span class="photo-slideshow-img" :style="{ backgroundImage: startPhotoUrl }"></span>
-          <div class="photo-title-container">
-            <h3>{{ startPhoto.title }}</h3>
+      <div class="Wallop Wallop--fade photo-slideshow">
+        <div class="Wallop-list">
+          <!-- starting photo -->
+          <div class="Wallop-item photo-slide">
+            <span data-width="1600" data-height="900" data-state="loaded" class="photo-slideshow-img loaded" :style="'background-image:' + startPhotoUrl"></span>
+            <div class="photo-title-container">
+              <h3>{{startPhoto.title}}</h3>
+            </div>
           </div>
-        </li>
-
-        <lazy-background v-for="photo in photos"
-          class="photo-slide"
-          :image-source="photo.src"
-          :image-title="photo.title"
-          :key="photo.src"
-          loadingImage="static/img/blank.png"
-          errorImage="static/img/blank.png">
-        </lazy-background>
-      </ul>
-
+          <!-- lazy load the remaining photos -->
+          <lazy-background v-for="photo in photos"
+            class="photo-slide"
+            :image-source="photo.src"
+            :image-title="photo.title"
+            :key="photo.src"
+            loadingImage="static/img/blank.png"
+            errorImage="static/img/blank.png">
+          </lazy-background>
+        </div>
+        <button class="Wallop-buttonPrevious">Previous</button>
+        <button class="Wallop-buttonNext">Next</button>
+      </div>
     </div>
 
     <div class="content">
@@ -81,7 +85,7 @@
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-          <div class="Wallop Wallop--fold">
+          <div class="Wallop Wallop--slide slideshow-projects">
             <div class="Wallop-list">
               <div class="Wallop-item" v-for="n of 6">
                 <img
@@ -96,9 +100,6 @@
               <button class="Wallop-buttonPrevious">Previous</button>
               <button class="Wallop-buttonNext">Next</button>
             </div>
-
-
-
           </div>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -154,7 +155,8 @@ export default {
           'src': 'static/img/america.jpg'
         }
       ],
-      wallop: function () {}
+      wallopPhotos: function () {},
+      wallopProject: function () {}
     }
   },
   computed: {
@@ -182,15 +184,19 @@ export default {
       });
     }, 1000);
 
-    var wallopEl = document.querySelector('.Wallop');
-    this.wallop = new Wallop(wallopEl); // eslint-disable-line
-    // this.autoplay(3000);
+    // photos slideshow
+    var wallopElPhotos = document.querySelector('.photo-slideshow');
+    this.wallopPhotos = new Wallop(wallopElPhotos); // eslint-disable-line
+    this.autoplayPhotos(6000);
+    // projects slideshow
+    var wallopElProject = document.querySelector('.slideshow-projects');
+    this.wallopProject = new Wallop(wallopElProject); // eslint-disable-line
   },
   components: {
     'lazy-background': LazyBackgroundImages
   },
   methods: {
-    autoplay: function (interval) {
+    autoplayPhotos: function (interval) {
       var lastTime = 0;
       var that = this;
 
@@ -198,13 +204,11 @@ export default {
         var update = timestamp - lastTime >= interval;
 
         if (update) {
-          that.wallop.next();
+          that.wallopPhotos.next();
           lastTime = timestamp;
         }
-
         requestAnimationFrame(frame);
       }
-
       requestAnimationFrame(frame);
     }
   }
@@ -214,6 +218,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import '../../node_modules/wallop/css/wallop.css';
-@import '../../node_modules/wallop/css/wallop--fold.css';
+@import '../../node_modules/wallop/css/wallop--slide.css';
 @import '../assets/scss/main.scss';
 </style>

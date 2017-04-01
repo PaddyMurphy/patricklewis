@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'variables';
 @import 'photos';
+@import 'wallop--fade';
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 h1, h2, h3,
@@ -119,35 +120,39 @@ footer {
 // wallop slider in case study
 .Wallop-buttonNext,
 .Wallop-buttonPrevious {
-  border: none;
-  background: rgba(0,0,0,0.1);
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
+  background: rgba(255,255,255,0.1);
   border-radius: 20px;
-  text-indent: -9999px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
   position: absolute;
+  text-indent: -9999px;
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.25s;
+  width: 40px;
   z-index: 9;
 
   &:hover {
-    background: rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.2);
+    &:before {
+      color: rgba(255,255,255,0.6);
+    }
   }
 }
 
 .Wallop-buttonNext:before,
 .Wallop-buttonPrevious:before {
-  color: $color-hero;
-  position: absolute;
-  top: 50%;
+  color: rgba(255,255,255,0.4);
+  font-size: 25px;
   left: 0;
-  width: 100%;
+  line-height: 0;
+  position: absolute;
   text-align: center;
   text-indent: 0;
-  font-size: 25px;
-  line-height: 0;
+  top: 50%;
+  transition: all 0.25s;
+  width: 100%;
 }
 
 .Wallop-buttonNext:before {
@@ -159,10 +164,25 @@ footer {
 }
 
 .Wallop-buttonPrevious {
-  left: 1pc;
+  left: 1em;
 }
 
 .Wallop-buttonNext {
-  right: 1pc;
+  right: 1em;
 }
+// this is the .Wallop container
+.slideshow-projects {
+  border-radius: 3px;
+  box-shadow:
+    0 0 0 2px grey,
+    0 0 0 15px $color-content,
+    0 0 0 17px grey;
+  margin: 2em 1em 3em;
+  max-width: 700px;
+
+  .Wallop-list {
+    background: #fff;
+  }
+}
+
 
