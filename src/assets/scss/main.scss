@@ -3,6 +3,7 @@
 @import 'photos';
 @import 'wallop--fade';
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
+// NOTE: all style are mobile first
 
 h1, h2, h3,
 .tagline,
@@ -23,21 +24,30 @@ body {
   background-color: #000;
 }
 
-.container {
-  overflow: hidden;
-}
-
 .hero {
   background: $color-hero;
   color: rgba(255,255,255,0.85);
   padding: 2em;
+  text-align: center;
   transition: all 0.3s;
   z-index: 10;
+  width: 100%;
+
+  @include mquery(small) {
+    text-align: left;
+    width: auto;
+  }
 }
 // override Stickyheader css
 .hero[style*="position: fixed"] {
   font-size: 55%;
   left: 0 !important;
+  position: relative !important;
+
+  @include mquery(small) {
+    left: 0 !important;
+    position: fixed !important;
+  }
 }
 
 .title {
@@ -52,21 +62,30 @@ body {
 .content {
   background-color: $color-content;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   z-index: 100;
+
+  @include mquery(small) {
+    flex-direction: row;
+  }
 }
 
 .nav-container {
-  flex: 1 0 230px;
+  flex: 1 0 2em;
+
+  @include mquery(small) {
+    flex: 1 0 230px;
+  }
 }
 
 .nav {
-  display: inline-block;
+  background: rgba(220, 220, 220, 0.95);
+  display: flex;
   list-style: none;
-  margin: 4em 0 0 3em;
-  padding: 0;
-  top: 60px;
+  margin: 0;
+  padding: 1em 0 0 2em;
+  top: 1em;
   transition: all 0.2s;
 
   a {
@@ -83,7 +102,6 @@ body {
       color: rgba(0,0,0,0.9);
     }
     &:hover {
-      // background: #cecdc9;
       border-bottom: 2px solid #cecdc9;
       color: #000;
     }
@@ -92,6 +110,20 @@ body {
   // override Stickyheader css
   &[style*="position: fixed"] {
     left: 0 !important;
+    top: 0 !important;
+    width: 100%;
+  }
+
+  @include mquery(small) {
+    background: rgba(220, 220, 220, 0);
+    display: inline-block;
+    padding: 4em 0 0 3em;
+
+    &[style*="position: fixed"] {
+      top: 60px !important;
+      display: inline-block;
+      width: auto;
+    }
   }
 }
 
@@ -107,7 +139,11 @@ body {
 
 .section {
   margin: 4em 0 0;
-  padding: 0 10vw 0 0;
+  padding: 0 10vw 0 2em;
+
+  @include mquery(small) {
+    padding: 0 10vw 0 0;
+  }
 }
 
 footer {
@@ -120,7 +156,7 @@ footer {
 // wallop slider in case study
 .Wallop-buttonNext,
 .Wallop-buttonPrevious {
-  background: rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.1);
   border-radius: 20px;
   border: none;
   cursor: pointer;
@@ -134,16 +170,16 @@ footer {
   z-index: 9;
 
   &:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.3);
     &:before {
-      color: rgba(255,255,255,0.6);
+      color: rgba(0,0,0,0.6);
     }
   }
 }
 
 .Wallop-buttonNext:before,
 .Wallop-buttonPrevious:before {
-  color: rgba(255,255,255,0.4);
+  color: rgba(0,0,0,0.4);
   font-size: 25px;
   left: 0;
   line-height: 0;
