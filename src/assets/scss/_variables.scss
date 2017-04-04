@@ -1,19 +1,13 @@
 $color-content: #F0EFEB;
 $color-hero: rgba(29, 48, 90, 0.5);
-// $color-hero: rgba(115, 114, 107, 0.5);
+$color-nav-mobile: rgba(220, 220, 220, 0.95);
 $photo-height-start: 60vh;
 $photo-height-end: 80vh;
 
 // media queries
 @mixin mquery($size) {
-  @if $size == xsmall {
-    @media (min-width: 320px) {
-      @content;
-    }
-  }
-
   @if $size == small {
-    @media (min-width: 500px) {
+    @media (min-width: 600px) {
       @content;
     }
   }

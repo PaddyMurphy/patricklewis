@@ -51,12 +51,18 @@ body {
 }
 
 .title {
-  font-size: 3em;
+  font-size: 2em;
   margin: 0 0 0.2em;
+  @include mquery(small) {
+    font-size: 3em;
+  }
 }
 
 .tagline {
-  font-size: 1.5em;
+  font-size: 1em;
+  @include mquery(small) {
+    font-size: 1.5em;
+  }
 }
 
 .content {
@@ -80,11 +86,11 @@ body {
 }
 
 .nav {
-  background: rgba(220, 220, 220, 0.95);
+  background: $color-nav-mobile;
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 1em 0 0 2em;
+  padding: 1em 0 1em 2em;
   top: 1em;
   transition: all 0.2s;
 
@@ -92,7 +98,7 @@ body {
     display: block;
     text-decoration: none;
     padding: 0.5em;
-    transition: all 0.4s;
+    // transition: all 0.25s;
 
     &:link {
       border-bottom: 2px solid transparent;
@@ -128,13 +134,17 @@ body {
 }
 
 .svg-mountains {
-  fill: $color-content;
+  fill: $color-nav-mobile;
   position: absolute;
   top: -48px;
   left: 5vw;
   height: 50px;
   width: auto;
   z-index: 99;
+
+  @include mquery(small) {
+    fill: $color-content;
+  }
 }
 
 .section {

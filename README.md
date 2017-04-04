@@ -1,6 +1,18 @@
 # patricklewis
 
-> A Vue.js project
+> Portfolio site built with vue.js
+
+## Github hosting
+
+Build the app to a 'docs' directory on the root level. In the gh repo under settings, change the Github Pages source to the 'docs' branch.
+
+Go to https://mountaindrawn.com/[repo name] to view. [https://mountaindrawn.com/patricklewis/](https://mountaindrawn.com/patricklewis/)
+
+## Changes to webpack
+
+Using the the vue-cli webpack option in this project
+
+index.js change from assetsPublicPath: '/' to assetsPublicPath: ''
 
 ## Build Setup
 
