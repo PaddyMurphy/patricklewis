@@ -6,7 +6,7 @@
 
 Build the app to a 'docs' directory on the root level. In the gh repo under settings, change the Github Pages source to the 'docs' branch.
 
-Go to https://mountaindrawn.com/[repo name] to view. [https://mountaindrawn.com/patricklewis/](https://mountaindrawn.com/patricklewis/)
+[https://mountaindrawn.com/patricklewis/](https://mountaindrawn.com/patricklewis/)
 
 ## Changes to webpack
 
