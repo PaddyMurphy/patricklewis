@@ -217,7 +217,8 @@ footer {
   right: 1em;
 }
 // this is the .Wallop container
-.slideshow-projects {
+.slideshow-projects,
+.slideshow-mobile {
   border-radius: 3px;
   box-shadow:
     0 0 0 2px grey,
@@ -228,6 +229,12 @@ footer {
 
   .Wallop-list {
     background: #fff;
+  }
+}
+
+.slideshow-mobile {
+  .Wallop-item {
+    // max-height: 500px;
   }
 }
 

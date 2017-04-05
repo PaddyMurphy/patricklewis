@@ -106,6 +106,21 @@
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
+          <div class="Wallop Wallop--slide slideshow-mobile">
+            <div class="Wallop-list">
+              <div class="Wallop-item" v-for="n of 6">
+                <img
+                  src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  class="b-lazy"
+                  :data-src="'static/img/ha-mobile-' + n + '.jpg'"
+                  alt=""
+                />
+              </div>
+              <button class="Wallop-buttonPrevious">Previous</button>
+              <button class="Wallop-buttonNext">Next</button>
+            </div>
+          </div>
+
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
@@ -188,9 +203,12 @@ export default {
     var wallopElPhotos = document.querySelector('.photo-slideshow');
     this.wallopPhotos = new Wallop(wallopElPhotos); // eslint-disable-line
     this.autoplayPhotos(6000);
-    // projects slideshow
+    // ha desktop slideshow
     var wallopElProject = document.querySelector('.slideshow-projects');
     this.wallopProject = new Wallop(wallopElProject); // eslint-disable-line
+    // ha mobile slideshow
+    var wallopElMobile = document.querySelector('.slideshow-mobile');
+    this.wallopProject = new Wallop(wallopElMobile); // eslint-disable-line
   },
   components: {
     'lazy-background': LazyBackgroundImages
