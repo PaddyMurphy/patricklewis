@@ -82,10 +82,10 @@
 
       <lazy-background
         class="section section--photo"
-        image-source="static/img/devils-river.jpg"
+        image-source="/static/img/devils-river.jpg"
         image-title="Devils River, Texas"
-        loadingImage="static/img/blank.png"
-        errorImage="static/img/blank.png">
+        loadingImage="/static/img/blank.png"
+        errorImage="/static/img/blank.png">
       </lazy-background>
 
       <div class="section section--experience" id="experience">
