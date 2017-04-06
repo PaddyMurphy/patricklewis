@@ -19,7 +19,7 @@
       </ul>
     </div>
 
-    <div class="hero" style="background-image: url('/static/img/bugaboo-spire.jpg')">
+    <div class="hero" style="background-image: url('static/img/bugaboo-spire.jpg')">
       <h1 class="title">Patrick Lewis</h1>
       <span class="tagline">User Experience Developer</span>
       <span class="photo-title">Bugaboo Spire, Canada</span>
