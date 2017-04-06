@@ -22,12 +22,36 @@ body {
 }
 
 .header {
-  position: absolute;
-  height: 100px;
+  background: rgba(0,0,0,0);
+  position: fixed;
+  height: 4.5em;
   width: 100vw;
   top: 0;
   left: 0;
+  transition: all 0.3s;
   z-index: 9;
+
+  .sticky-header & {
+    background: rgba(0,0,0,0.7);
+  }
+}
+
+.logo {
+  display: none;
+  fill: rgba(255,255,255,0.8);
+  opacity: 0;
+  height: 40px;
+  width: auto;
+  transition: all 0.3s;
+  transform: translate(2.5em, 0.5em);
+
+  .sticky-header & {
+    opacity: 1;
+  }
+
+  @include mquery(small) {
+    display: block;
+  }
 }
 
 .nav {
@@ -77,19 +101,32 @@ body {
 .title {
   font-size: 2em;
   margin: 0 0 0.2em;
+  opacity: 1;
+  transition: all 0.3s;
   position: relative;
-  z-index: 10;
+  z-index: 1;
+
   @include mquery(small) {
     font-size: 3em;
+  }
+
+  .sticky-header & {
+    opacity: 0;
   }
 }
 
 .tagline {
   font-size: 1em;
+  opacity: 1;
+  transition: opacity 0.3s;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   @include mquery(small) {
     font-size: 1.5em;
+  }
+
+  .sticky-header & {
+    opacity: 0;
   }
 }
 
@@ -101,11 +138,11 @@ body {
   font-weight: bold;
   position: absolute;
   right: 2em;
-  z-index: 10;
+  z-index: 1;
 }
 
 .section {
-  padding: 2em;
+  padding: 5em 2em;
 
   @include mquery(small) {
     padding: 5em;
