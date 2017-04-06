@@ -1,16 +1,14 @@
 @import 'reset';
 @import 'variables';
-@import 'photos';
-@import 'wallop--fade';
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
+// @import 'wallop--fade';
+// @import '../../node_modules/wallop/css/wallop.css';
+// @import '../../node_modules/wallop/css/wallop--slide.css';
+@import url('https://fonts.googleapis.com/css?family=Lato');
 // NOTE: all style are mobile first
 
 h1, h2, h3,
 .tagline,
-.nav {
-  font-family: Merriweather, serif;
-  font-weight: normal;
-}
+.nav {}
 
 h1, h2 {
   margin-bottom: 2em;
@@ -21,77 +19,25 @@ h3 {
 }
 
 body {
-  background-color: #000;
+  font-family: Lato, serif;
 }
 
-.hero {
-  background: $color-hero;
-  color: rgba(255,255,255,0.85);
-  padding: 2em;
-  text-align: center;
-  transition: all 0.3s;
-  z-index: 10;
-  width: 100%;
-
-  @include mquery(small) {
-    text-align: left;
-    width: auto;
-  }
-}
-// override Stickyheader css
-.hero[style*="position: fixed"] {
-  font-size: 55%;
-  left: 0 !important;
-  position: relative !important;
-
-  @include mquery(small) {
-    left: 0 !important;
-    position: fixed !important;
-  }
-}
-
-.title {
-  font-size: 2em;
-  margin: 0 0 0.2em;
-  @include mquery(small) {
-    font-size: 3em;
-  }
-}
-
-.tagline {
-  font-size: 1em;
-  @include mquery(small) {
-    font-size: 1.5em;
-  }
-}
-
-.content {
-  background-color: $color-content;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 100;
-
-  @include mquery(small) {
-    flex-direction: row;
-  }
-}
-
-.nav-container {
-  flex: 1 0 2em;
-
-  @include mquery(small) {
-    flex: 1 0 230px;
-  }
+.header {
+  position: absolute;
+  height: 100px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
 .nav {
-  background: $color-nav-mobile;
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 1em 0 1em 2em;
+  position: absolute;
   top: 1em;
+  right: 2em;
   transition: all 0.2s;
 
   a {
@@ -102,65 +48,123 @@ body {
 
     &:link {
       border-bottom: 2px solid transparent;
-      color: rgba(0,0,0,0.9);
+      color: rgba(255,255,255,0.9);
     }
     &:visited {
-      color: rgba(0,0,0,0.9);
+      color: rgba(255,255,255,0.9);
     }
     &:hover {
-      border-bottom: 2px solid #cecdc9;
-      color: #000;
-    }
-  }
-
-  // override Stickyheader css
-  &[style*="position: fixed"] {
-    left: 0 !important;
-    top: 0 !important;
-    width: 100%;
-  }
-
-  @include mquery(small) {
-    background: rgba(220, 220, 220, 0);
-    display: inline-block;
-    padding: 4em 0 0 3em;
-
-    &[style*="position: fixed"] {
-      top: 60px !important;
-      display: inline-block;
-      width: auto;
+      border-bottom: 2px solid rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.8);
     }
   }
 }
 
-.svg-mountains {
-  fill: $color-nav-mobile;
-  position: absolute;
-  top: -48px;
-  left: 5vw;
-  height: 50px;
-  width: auto;
-  z-index: 99;
+.hero {
+  color: #fff;
+  text-align: center;
+  height: 80vh;
+  background-image: url('/static/img/bugaboo-spire.jpg');
+  background-color: rgba(0,0,0,0.25);
+  background-blend-mode: hard-light;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 24vh 0 0;
+  position: relative;
+  width: 100vw;
+}
 
+.title {
+  font-size: 2em;
+  margin: 0 0 0.2em;
+  position: relative;
+  z-index: 10;
   @include mquery(small) {
-    fill: $color-content;
+    font-size: 3em;
   }
+}
+
+.tagline {
+  font-size: 1em;
+  position: relative;
+  z-index: 10;
+  @include mquery(small) {
+    font-size: 1.5em;
+  }
+}
+
+.photo-title {
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  bottom: 1.5em;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: bold;
+  position: absolute;
+  right: 2em;
+  z-index: 10;
 }
 
 .section {
-  margin: 4em 0 0;
-  padding: 0 10vw 0 2em;
+  padding: 2em;
 
   @include mquery(small) {
-    padding: 0 10vw 0 0;
+    padding: 5em;
+  }
+
+  &--casestudy {
+    background: #FBFBFE;
+  }
+
+  &--photo {
+    background-image: url('/static/img/devils-river.jpg');
+    // background-color: rgba(0,0,0,0.25);
+    // background-blend-mode: hard-light;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    height: 20em;
+    position: relative;
+
+    .photo-title {
+      opacity: 0.8;
+    }
+  }
+
+  &--experience {
+    background: #ececec;
+  }
+
+  &--contact {
+    background: #fff;
+    position: relative;
   }
 }
 
 footer {
-  background-color: $color-content;
+  background: $color-footer;
+  color: #fff;
   font-size: 0.8em;
   padding: 1em;
+  position: relative;
   text-align: right;
+}
+
+.photo-footer {
+  position: absolute;
+  right: 5em;
+  top: 2em;
+}
+
+.svg-mountains {
+  fill: $color-footer;
+  width: 80px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(4em, -40px);
 }
 
 // wallop slider in case study
@@ -222,7 +226,7 @@ footer {
   border-radius: 3px;
   box-shadow:
     0 0 0 2px grey,
-    0 0 0 15px $color-content,
+    0 0 0 15px #fff,
     0 0 0 17px grey;
   margin: 2em 1em 3em;
   max-width: 700px;
@@ -231,11 +235,3 @@ footer {
     background: #fff;
   }
 }
-
-.slideshow-mobile {
-  .Wallop-item {
-    // max-height: 500px;
-  }
-}
-
-

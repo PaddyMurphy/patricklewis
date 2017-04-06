@@ -1,17 +1,12 @@
 <!-- https://github.com/darrynten/vue-lazy-background-images -->
 <template>
-  <div class="Wallop-item">
-    <span
-      class="photo-slideshow-img"
-      :class="[imageClass, imageState]"
-      :style="computedStyle"
-      :data-width="imageWidth"
-      :data-height="imageHeight"
-      :data-state="imageState">
-    </span>
-    <div class="photo-title-container">
-      <h3>{{imageTitle}}</h3>
-    </div>
+  <div
+    :class="[imageClass, imageState]"
+    :style="computedStyle"
+    :data-width="imageWidth"
+    :data-height="imageHeight"
+    :data-state="imageState">
+    <span class="photo-title">{{imageTitle}}</span>
   </div>
 </template>
 
@@ -58,7 +53,7 @@ export default {
     delay: {
       type: Number,
       required: false,
-      default: 2000
+      default: 0
     }
   },
   data () {
