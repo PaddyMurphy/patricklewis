@@ -41,7 +41,7 @@
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-        <!-- <div class="Wallop Wallop--slide slideshow-projects">
+        <div class="Wallop Wallop--slide slideshow-projects">
           <div class="Wallop-list">
             <div class="Wallop-item" v-for="n of 6">
               <img
@@ -56,7 +56,7 @@
             <button class="Wallop-buttonPrevious">Previous</button>
             <button class="Wallop-buttonNext">Next</button>
           </div>
-        </div> -->
+        </div>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
@@ -81,12 +81,15 @@
       </div>
 
       <lazy-background
-        class="section section--photo"
+        class="section--photo"
         image-source="static/img/devils-river.jpg"
-        image-title="Devils River, Texas"
         loadingImage="static/img/blank.png"
         errorImage="static/img/blank.png">
       </lazy-background>
+
+      <div class="photo-window">
+        <span class="photo-title">Devils River, Texas</span>
+      </div>
 
       <div class="section section--experience" id="experience">
         <h2>Experience</h2>
@@ -131,10 +134,10 @@
 
 <script>
 import LazyBackgroundImages from '@/components/VueLazyBackgroundImage';
-import Parallax from '@/assets/parallax'
+// import Parallax from '@/components/parallax'
 import Smoothscroll from 'smooth-scroll';
 import Blazy from 'bLazy';
-// import Wallop from 'wallop';
+import Wallop from 'wallop';
 
 export default {
   name: 'container',
@@ -157,7 +160,9 @@ export default {
       });
     }, 1000);
 
-    console.log(Parallax);
+    // ha desktop slideshow
+    var wallopElProject = document.querySelector('.slideshow-projects');
+    this.wallopProject = new Wallop(wallopElProject); // eslint-disable-line
   },
   components: {
     'lazy-background': LazyBackgroundImages

@@ -6,7 +6,6 @@
     :data-width="imageWidth"
     :data-height="imageHeight"
     :data-state="imageState">
-    <span class="photo-title">{{imageTitle}}</span>
   </div>
 </template>
 
