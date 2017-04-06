@@ -64,7 +64,7 @@ body {
   color: #fff;
   text-align: center;
   height: 80vh;
-  background-image: url('/static/img/bugaboo-spire.jpg');
+  // background-image set in Container.vue
   background-color: rgba(0,0,0,0.25);
   background-blend-mode: hard-light;
   background-position: top center;
@@ -117,9 +117,6 @@ body {
   }
 
   &--photo {
-    background-image: url('/static/img/devils-river.jpg');
-    // background-color: rgba(0,0,0,0.25);
-    // background-blend-mode: hard-light;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -19,7 +19,7 @@
       </ul>
     </div>
 
-    <div class="hero">
+    <div class="hero" style="background-image: url('/static/img/bugaboo-spire.jpg')">
       <h1 class="title">Patrick Lewis</h1>
       <span class="tagline">User Experience Developer</span>
       <span class="photo-title">Bugaboo Spire, Canada</span>
@@ -82,10 +82,10 @@
 
       <lazy-background
         class="section section--photo"
-        image-source="/static/img/devils-river.jpg"
+        image-source="static/img/devils-river.jpg"
         image-title="Devils River, Texas"
-        loadingImage="/static/img/blank.png"
-        errorImage="/static/img/blank.png">
+        loadingImage="static/img/blank.png"
+        errorImage="static/img/blank.png">
       </lazy-background>
 
       <div class="section section--experience" id="experience">
