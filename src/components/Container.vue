@@ -69,7 +69,7 @@
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-        <!-- <div class="Wallop Wallop--slide slideshow-mobile">
+        <div class="Wallop Wallop--slide slideshow-mobile">
           <div class="Wallop-list">
             <div class="Wallop-item" v-for="n of 6">
               <img
@@ -82,7 +82,7 @@
             <button class="Wallop-buttonPrevious">Previous</button>
             <button class="Wallop-buttonNext">Next</button>
           </div>
-        </div> -->
+        </div>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
@@ -105,7 +105,7 @@
           desc..
         </p>
 
-        <h3>UX Developer at BancVue <small>(2009 - 2011)</small></h3>
+        <h3>Front-end Developer at BancVue <small>(2009 - 2011)</small></h3>
         <ul>
           <li>Create credit union web sites using html, css, Javascript and a content management system.</li>
           <li>Introduced the use of SASS, css3 and methods to ensure cross browser consistency.</li>
@@ -116,13 +116,21 @@
       </div>
 
       <div class="section section--contact" id="contact">
-        <h2>Contact</h2>
-        <p>Email me</p>
         <img class="b-lazy photo-footer"
           src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
           data-src="static/img/patrick.jpg"
           alt="drawing of Patrick"
         />
+        <h2>Contact</h2>
+        <p>
+          Email me at <span style="unicode-bidi:bidi-override; direction: rtl;"> moc.liamg@siwelbkcirtap</span>
+        </p>
+        <ul class="contact-list">
+          <li><a href="https://www.linkedin.com/in/patrick-lewis-4b71484/">LinkedIn</a></li>
+          <li><a href="https://www.flickr.com/photos/paddymurphy">Flickr</a></li>
+          <li><a href="https://dribbble.com/paddymurphy">Dribbble</a></li>
+          <li><a href="https://vimeo.com/paddymurphy">Vimeo</a></li>
+        </ul>
       </div>
 
     </div><!-- END .sections -->
@@ -170,6 +178,9 @@ export default {
     // ha desktop slideshow
     var wallopElProject = document.querySelector('.slideshow-projects');
     this.wallopProject = new Wallop(wallopElProject); // eslint-disable-line
+
+    var wallopElMobile = document.querySelector('.slideshow-mobile');
+    this.wallopElMobile = new Wallop(wallopElMobile); // eslint-disable-line
 
     // show / hide the top nav
     window.scrollBreakpoint(function () {

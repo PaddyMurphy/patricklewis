@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 // NOTE: all style are mobile first
 
-h1, h2, h3,
-.tagline,
-.nav {}
+h1, h2, h3, p, ol, ul {
+  max-width: 35em; // optimum line length of readability
+}
 
 h1, h2 {
   margin-bottom: 2em;
@@ -22,7 +22,8 @@ body {
 }
 
 .header {
-  background: rgba(0,0,0,0.7);
+  // background: rgba(0,0,0,0.7);
+  background: $color-header;
   position: fixed;
   height: 4.5em;
   width: 100vw;
@@ -105,7 +106,7 @@ body {
   z-index: 1;
 
   @include mquery(small) {
-    font-size: 3em;
+    font-size: 6vw;
   }
 
   .sticky-header & {
@@ -119,8 +120,9 @@ body {
   transition: opacity 0.3s;
   position: relative;
   z-index: 1;
+
   @include mquery(small) {
-    font-size: 1.5em;
+    font-size: 3vw;
   }
 
   .sticky-header & {
@@ -135,7 +137,7 @@ body {
   font-size: 0.9em;
   font-weight: bold;
   position: absolute;
-  right: 2em;
+  right: 3em;
   z-index: 1;
 }
 
@@ -151,7 +153,7 @@ body {
   }
 
   &--casestudy {
-    background: #ececec;
+    background: $color-section;
   }
 
   &--photo {
@@ -168,7 +170,7 @@ body {
   }
 
   &--experience {
-    background: #ececec;
+    background: $color-section;
   }
 
   &--contact {
@@ -195,10 +197,17 @@ footer {
   text-align: right;
 }
 
+.contact-list {
+  display: inline-block;
+  margin: 0;
+
+  li {
+    padding: 0.3em 0;
+  }
+}
+
 .photo-footer {
-  position: absolute;
-  right: 5em;
-  top: 2em;
+  float: right;
 }
 
 .svg-mountains {
@@ -211,7 +220,7 @@ footer {
   transform: translate(4em, -40px);
 }
 
-// wallop slider in case study
+// Wallop slider in case study
 .Wallop-buttonNext,
 .Wallop-buttonPrevious {
   background: rgba(0,0,0,0.1);
@@ -274,4 +283,13 @@ footer {
   .Wallop-list {
     background: #fff;
   }
+
+  .Wallop-item {
+    text-align: center;
+  }
 }
+
+.slideshow-mobile {
+  width: 350px;
+}
+
