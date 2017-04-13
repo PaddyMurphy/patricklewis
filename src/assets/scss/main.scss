@@ -175,6 +175,7 @@ body {
 
   &--contact {
     background: #fff;
+    display: flex;
     position: relative;
   }
 }
@@ -197,6 +198,15 @@ footer {
   text-align: right;
 }
 
+.contact-content {
+  flex: 1 0 auto;
+}
+
+.contact-side {
+  flex: 1 0 30%;
+  text-align: center;
+}
+
 .contact-list {
   display: inline-block;
   margin: 0;
@@ -206,8 +216,10 @@ footer {
   }
 }
 
-.photo-footer {
-  float: right;
+.contact-photo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 
 .svg-mountains {
