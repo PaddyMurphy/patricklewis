@@ -36,9 +36,7 @@
 
       <div class="section section--about" id="about">
         <h2>About</h2>
-        <p>I am a UX/UI Developer with over 10 years experience.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>UX/UI Developer with over 10 years experience creating web applications. I enjoy working collaboratively with a team to design, prototype, test and deliver products.</p>
       </div>
 
       <div class="section section--casestudy" id="case-study">
@@ -147,7 +145,8 @@
         <path d="M23.9510131,35.9025137 L22.5026649,42 L30.1301837,42 L28.1930637,35.3999763 L36.2460938,34.4459685 L26.6230469,0.275390625 L17,36.7259703 L23.9510131,35.9025137 Z" id="Combined-Shape"></path>
         <path d="M5.04362045,38.172106 L2.11914062,42.0888672 L10.5302734,42.0888672 L9.69876136,38.3261376 L14.0087891,38.46875 L11.0673828,10.0390625 L0.580078125,38.0244141 L5.04362045,38.172106 Z" id="Combined-Shape"></path>
       </svg>
-      copyright © 2017
+      <span class="github">get this code on <a href="https://github.com/PaddyMurphy/patricklewis">github</a></span>
+      <span class="copyright">copyright © 2017</span>
     </footer>
   </div>
 </template>
@@ -161,12 +160,6 @@ import Wallop from 'wallop';
 
 export default {
   name: 'container',
-  data () {
-    return {
-      title: 'what'
-    }
-  },
-  computed: {},
   mounted: function () {
     // animate scrollto
     Smoothscroll.init({
@@ -197,8 +190,7 @@ export default {
   },
   components: {
     'lazy-background': LazyBackgroundImages
-  },
-  methods: {}
+  }
 }
 </script>
 

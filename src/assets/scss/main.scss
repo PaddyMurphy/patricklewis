@@ -22,7 +22,6 @@ body {
 }
 
 .header {
-  // background: rgba(0,0,0,0.7);
   background: $color-header;
   position: fixed;
   height: 4.5em;
@@ -100,33 +99,31 @@ body {
 .title {
   font-size: 2em;
   margin: 0 0 0.2em;
-  opacity: 1;
-  transition: all 0.3s;
-  position: relative;
-  z-index: 1;
 
   @include mquery(small) {
     font-size: 6vw;
   }
-
-  .sticky-header & {
-    opacity: 0;
-  }
 }
 
 .tagline {
+  display: block;
   font-size: 1em;
-  opacity: 1;
-  transition: opacity 0.3s;
-  position: relative;
-  z-index: 1;
 
   @include mquery(small) {
     font-size: 3vw;
   }
+}
+
+.title,
+.tagline {
+  opacity: 1;
+  position: relative;
+  transition: all 0.3s;
+  z-index: 1;
 
   .sticky-header & {
     opacity: 0;
+    transform: translateY(-1em);
   }
 }
 
@@ -191,11 +188,39 @@ body {
 
 footer {
   background: $color-footer;
-  color: #fff;
+  color: #CAC9C8;
+  display: flex;
   font-size: 0.8em;
+  justify-content: flex-end;
   padding: 1em;
   position: relative;
   text-align: right;
+
+  a:link {
+    color: #CAC9C8;
+    border-bottom: 1px solid currentColor;
+    transition: all 0.25s;
+    padding: 0 0 0.2em;
+  }
+
+  a:visited {
+    color: #CAC9C8;
+    border-bottom: 1px solid currentColor;
+    padding: 0 0 0.2em;
+  }
+
+  a:hover {
+    color: #fff;
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+.github {
+
+}
+
+.copyright {
+  margin: 0 0 0 2em;
 }
 
 .contact-content {
@@ -288,7 +313,7 @@ footer {
 // this is the .Wallop container
 .slideshow-projects,
 .slideshow-mobile {
-  box-shadow: 0 0 0 2px grey;
+  box-shadow: 0 0 0 2px $color-header;
   margin: 2em auto 3em;
   max-width: 700px;
 

@@ -12,7 +12,13 @@ Build the app to a 'docs' directory on the root level. In the gh repo under sett
 
 Using the the vue-cli webpack option in this project
 
-index.js change from assetsPublicPath: '/' to assetsPublicPath: ''
+index.js change:
+
+```
+index: path.resolve(__dirname, '../docs/index.html')
+assetsRoot: path.resolve(__dirname, '../docs')
+assetsPublicPath: ''
+```
 
 ## Build Setup
 
