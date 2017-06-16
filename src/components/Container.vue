@@ -175,7 +175,7 @@ export default {
   font-size: 0.9em
   font-weight: bold
   position: absolute
-  right: 3em
+  right: 4em
   z-index: 1
 
 .photo-window

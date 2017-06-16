@@ -71,13 +71,18 @@
   color: $white-ter
   position: fixed
   top: 1em
-  right: 2em
+  left: 1em
   z-index: 99
   ul
     border: none
+    flex-wrap: wrap
+    flex-shrink: 1
   .active a
     border-bottom: 2px solid $grey-lighter
     color: $grey-lighter
+  @include mquery(small)
+    left: unset
+    right: 2em
 
 .tabs a
   border-bottom: 2px solid transparent
