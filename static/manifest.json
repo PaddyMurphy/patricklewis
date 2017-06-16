@@ -4,18 +4,18 @@
   "short_name": "UX Dev",
   "icons": [
     {
-      "src": "//mountaindrawn.com/vue-pwa/static/img/icons/android-chrome-192x192.png",
+      "src": "//mountaindrawn.com/patricklewis/static/img/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "//mountaindrawn.com/vue-pwa/static/img/icons/android-chrome-512x512.png",
+      "src": "//mountaindrawn.com/patricklewis/static/img/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/patricklewis",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#FFFFFF",
   "theme_color": "#3273DD"
 }
