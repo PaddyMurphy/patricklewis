@@ -16,11 +16,10 @@ export default new Router({
       path: '/:section',
       name: 'ContainerSection',
       component: Container
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
-  ],
-  scrollBehavior (to, from, savedPosition) {
-    // console.log(to);
-    // console.log(from);
-    // console.log(savedPosition);
-  }
+  ]
 })

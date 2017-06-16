@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>Patrick Lewis : User Experience Developer</title><link rel=icon type=image/png sizes=32x32 href=static/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=static/img/icons/favicon-16x16.png><!--[if IE]><link rel="shortcut icon" href="static/img/icons/favicon.ico"><![endif]--><link rel=manifest href=static/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=apple-mobile-web-app-title content=vue-pwa><link rel=apple-touch-icon href=static/img/icons/apple-touch-icon-152x152.png><meta name=msapplication-TileImage content=static/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000><link rel=preload href=static/js/app.ab5f7123db2b461af1ec.js as=script><link rel=preload href=static/css/app.f109c51bc245d3de4c1bc6924578a4b1.css as=style><link rel=preload href=static/js/vendor.7897cb104ea723a1c094.js as=script><link rel=preload href=static/js/manifest.3805451e496b943a06fd.js as=script><link href=static/css/app.f109c51bc245d3de4c1bc6924578a4b1.css rel=stylesheet></head><body><div id=app></div><script>(function() {
+(function() {
   'use strict';
 
   // Check to make sure service workers are supported in the current browser,
@@ -52,11 +52,4 @@
         });
       }
   });
-})();</script><script>/* eslint-disable */
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-100331492-1', 'auto');
-      ga('send', 'pageview');</script><script type=text/javascript src=static/js/manifest.3805451e496b943a06fd.js></script><script type=text/javascript src=static/js/vendor.7897cb104ea723a1c094.js></script><script type=text/javascript src=static/js/app.ab5f7123db2b461af1ec.js></script></body></html>
+})();

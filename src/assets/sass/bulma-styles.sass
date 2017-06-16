@@ -1,0 +1,19 @@
+$color-section: #F3F6FC
+$color-footer: #4F4B49
+$color-header: rgba(17, 34, 51, 0.9)
+
+$primary: $blue
+$blue-invert: $white
+$primary-invert: $blue-invert
+
+// media queries
+@mixin mquery($size)
+  @if $size == small
+    @media (min-width: 500px)
+      @content
+
+  @else if $size == medium
+    @media (min-width: 1000px)
+      @content
+
+

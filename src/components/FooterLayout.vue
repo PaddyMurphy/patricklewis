@@ -1,0 +1,52 @@
+<template>
+  <footer>
+    <svg class="svg-mountains" viewBox="0 0 78 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <path d="M66.6605656,36.6542958 L65.5026649,42 L73.1301837,42 L70.5028819,36.6542958 L77.2353516,36.6542958 L65.6220703,10 L60,36.6542958 L66.6605656,36.6542958 Z" id="Combined-Shape-Copy"></path>
+      <path d="M32,42 L48.0947266,22 L61.9858398,42 L32,42 Z M38.5556641,41.1205474 L50.2522381,41.0467904 L44.8624445,31.2734957 L38.5556641,41.1205474 Z"></path>
+      <path d="M23.9510131,35.9025137 L22.5026649,42 L30.1301837,42 L28.1930637,35.3999763 L36.2460938,34.4459685 L26.6230469,0.275390625 L17,36.7259703 L23.9510131,35.9025137 Z"></path>
+      <path d="M5.04362045,38.172106 L2.11914062,42.0888672 L10.5302734,42.0888672 L9.69876136,38.3261376 L14.0087891,38.46875 L11.0673828,10.0390625 L0.580078125,38.0244141 L5.04362045,38.172106 Z"></path>
+    </svg>
+    <div class="container">
+      <span class="github">Created with <a href="https://github.com/vuejs-templates/pwa">Vuejs pwa</a> and <a href="http://bulma.io/">bulma</a>. git it on <a href="https://github.com/PaddyMurphy/patricklewis">github</a></span>
+
+      <span class="copyright">copyright © 2017</span>
+    </div>
+  </footer>
+</template>
+
+<script>
+  export default {
+    name: 'footer-layout'
+  }
+</script>
+
+<style scoped lang="sass">
+// import initial variables
+@import '../../node_modules/bulma/sass/utilities/initial-variables'
+// import custom variables
+@import '../assets/sass/bulma-styles.sass'
+
+footer
+  background: $color-footer
+  color: #CAC9C8
+  display: flex
+  font-size: 0.8em
+  justify-content: flex-end
+  padding: 1em
+  position: relative
+  text-align: right
+  a, a:visited
+    color: $primary-invert
+
+.copyright
+  margin: 0 0 0 2em
+
+.svg-mountains
+  fill: $color-footer
+  width: 80px
+  height: auto
+  position: absolute
+  top: 0
+  left: 0
+  transform: translate(4em, -40px)
+</style>
