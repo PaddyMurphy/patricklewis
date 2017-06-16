@@ -1,3 +1,4 @@
+<!-- TODO: fix manifest start_url, github redirects on /index.html -->
 <template>
   <div class="layout">
 
@@ -55,9 +56,10 @@
       <div class="container">
         <h2 class="title is-spaced">Case Study</h2>
         <h3 class="subtitle">HomeAway Onboarding</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>The last project I worked on was the new HomeAway onboarding experience. With a goal of increasing owner onboarding we user tested and iterated on the design to reach the final product.</p>
+
+        <p>The new onboarding flow was created with React to be responsive and work on both desktop and mobile. Below is what the flow looks like on desktop.</p>
 
         <!-- TODO: insert image gallery -->
         <div class="Wallop Wallop--slide slideshow-projects">
@@ -77,9 +79,7 @@
           </div>
         </div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>The HomeAway onboarding flow on mobile.</p>
 
         <!-- TODO: insert image gallery -->
         <div class="Wallop Wallop--slide slideshow-mobile">
@@ -96,8 +96,6 @@
             <button class="Wallop-buttonNext">Next</button>
           </div>
         </div>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div> <!-- END container -->
     </section>
 
@@ -286,5 +284,5 @@ export default {
 
 
 .slideshow-mobile
-  width: 350px
+  max-width: 380px
 </style>
