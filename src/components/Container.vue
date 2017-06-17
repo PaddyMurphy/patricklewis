@@ -17,9 +17,9 @@
         <h3 class="subtitle">UX Developer at HomeAway <small>(2015 - 2016)</small></h3>
         <ul>
           <li>Helped establish the new Design Technologist role within the UX Design team.</li>
-          <li>Coloborated with designers and product managers to create testable prototypes.</li>
-          <li>Participated in user testing to create new iterations based the results</li>
-          <li>Joined team responsible for developing the final product to help with creating the experience</li>
+          <li>Colloborated with designers and product managers to create testable prototypes.</li>
+          <li>Participated in user testing to create new iterations based the results.</li>
+          <li>Joined team responsible for developing the final product to help with creating the experience.</li>
         </ul>
 
         <h3 class="subtitle">UI Developer at HomeAway <small>(2011 - 2015)</small></h3>
@@ -27,13 +27,13 @@
           <li>Lead UI developer on property management team for 3 years.</li>
           <li>Created property management dashboard with tools enabling the management of many properties at once.</li>
           <li>Built early products primarily with backbone, handlebars, and an in-house 'thin-ui' java based system which allows decoupling of the UI and backend applications.</li>
-          <li>Adopted React later to replace the UI stack</li>
+          <li>Adopted React later to replace the UI stack.</li>
         </ul>
 
         <h3 class="subtitle">Front-end Developer at BancVue <small>(2009 - 2011)</small></h3>
         <ul>
-          <li>Create credit union web sites using html, css, Javascript and a content management system.</li>
-          <li>Introduced the use of SASS, css3 and methods to ensure cross browser consistency.</li>
+          <li>Created credit union web sites using html, css, Javascript and a content management system.</li>
+          <li>Introduced the use of SASS and methods to ensure cross browser consistency.</li>
           <li>Improved the efficiency, quality and speed of sites created.</li>
         </ul>
 
@@ -59,7 +59,7 @@
 
         <p>The last project I worked on was the new HomeAway onboarding experience. With a goal of increasing owner onboarding we user tested and iterated on the design to reach the final product.</p>
 
-        <p>The new onboarding flow was created with React to be responsive and work on both desktop and mobile. Below is what the flow looks like on desktop.</p>
+        <p>The new onboarding flow was created with React to be responsive and work on both desktop and mobile. Below is what the desktop onboarding flow.</p>
 
         <!-- TODO: insert image gallery -->
         <div class="Wallop Wallop--slide slideshow-projects">
@@ -160,11 +160,17 @@ export default {
 <style lang="sass">
 // import initial variables
 @import '../../node_modules/bulma/sass/utilities/initial-variables'
-// // import custom variables
+// import custom variables
 @import '../assets/sass/bulma-styles.sass'
 // Import the rest of Bulma
-// NOTE: only import once here in the container.vue
-@import '../../node_modules/bulma/bulma'
+// Note: only importing what is needed
+@import "../../node_modules/bulma/sass/utilities/_all"
+@import "../../node_modules/bulma/sass/base/_all"
+@import "../../node_modules/bulma/sass/layout/_all"
+@import "../../node_modules/bulma/sass/components/tabs"
+@import "../../node_modules/bulma/sass/elements/content"
+@import "../../node_modules/bulma/sass/elements/title"
+// slideshow css
 @import '../../node_modules/wallop/css/wallop.css';
 @import '../../node_modules/wallop/css/wallop--slide.css';
 
