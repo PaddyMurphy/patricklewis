@@ -7,7 +7,7 @@
       <path d="M5.04362045,38.172106 L2.11914062,42.0888672 L10.5302734,42.0888672 L9.69876136,38.3261376 L14.0087891,38.46875 L11.0673828,10.0390625 L0.580078125,38.0244141 L5.04362045,38.172106 Z"></path>
     </svg>
     <div class="container">
-      <span class="github">Created with <a href="https://github.com/vuejs-templates/pwa">Vuejs pwa</a> and <a href="http://bulma.io/">bulma</a>. git it on <a href="https://github.com/PaddyMurphy/patricklewis">github</a></span>
+      <span class="github">Created with <a href="https://github.com/vuejs-templates/pwa" target="_blank">Vuejs pwa</a> and <a href="http://bulma.io/" target="_blank">bulma</a>. git it on <a href="https://github.com/PaddyMurphy/patricklewis" target="_blank">github</a></span>
 
       <span class="copyright">copyright © 2017</span>
     </div>

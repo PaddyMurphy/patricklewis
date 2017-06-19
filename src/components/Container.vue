@@ -42,7 +42,8 @@
           <li>Javascript along with React, Vuejs, and webpack</li>
           <li>css and pre / post processors</li>
           <li>semantic and accessible html5</li>
-          <li>UX best practices</li>
+          <li>UX/UI best practices</li>
+          <li>Currently playing with Vuejs <a href="https://cordova.apache.org/" target="_blank">Cordova</a> apps</li>
           <li>4 years United States Marine Corps</li>
         </ul>
       </div>
