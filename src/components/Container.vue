@@ -280,7 +280,7 @@ export default {
 // this is the .Wallop containe
 .slideshow-projects,
 .slideshow-mobile
-  box-shadow: 0 0 0 2px $color-header
+  // box-shadow: 0 0 0 2px $color-header
   margin: 2em auto 3em
   max-width: $tablet
   .Wallop-list
