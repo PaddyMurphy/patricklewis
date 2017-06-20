@@ -146,4 +146,12 @@
     opacity: 0
     transform: translateY(-1em)
 
+.hero-body .title
+  @include mquery(medium)
+    font-size: 4em
+
+.hero-body .subtitle
+  @include mquery(medium)
+    font-size: 2em
+
 </style>
