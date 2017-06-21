@@ -9,7 +9,7 @@
         <ul class="contact-list">
           <li><a href="static/patrick-lewis-resume.pdf" target="_blank">Resume PDF</a></li>
           <li><a href="https://www.linkedin.com/in/patrick-lewis-4b71484/">LinkedIn</a></li>
-          <li><a href="https://mountaindrawn.com/riverflow" target="_blank">Riverflow app</a> (built with vue-pwa and bulma)</li>
+          <li><a href="https://mountaindrawn.com/riverflow" target="_blank">Riverflow app</a> <br />(built with vue-pwa and bulma)</li>
           <li><a href="https://www.flickr.com/photos/paddymurphy">Flickr</a></li>
           <li><a href="https://dribbble.com/paddymurphy">Dribbble</a></li>
           <li><a href="https://vimeo.com/paddymurphy">Vimeo</a></li>
@@ -51,7 +51,7 @@
   flex-direction: row;
 
 .contact-content
-  flex: 1 0 auto
+  flex: 1 1 auto
 
 .contact-side
   flex: 1 1 30%
