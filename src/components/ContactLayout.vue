@@ -7,7 +7,6 @@
           Email me at <span style="unicode-bidi:bidi-override; direction: rtl;"> moc.liamg@siwelbkcirtap</span>
         </p>
         <ul class="contact-list">
-          <li><a href="static/patrick-lewis-resume.pdf" target="_blank">Resume PDF</a></li>
           <li><a href="https://www.linkedin.com/in/patrick-lewis-4b71484/">LinkedIn</a></li>
           <li>Riverflow app <br />(<a href="https://mountaindrawn.com/riverflow" target="_blank">Vuejs</a> vs <a href="https://mountaindrawn.com/react-riverflow" target="_blank">React</a>)</li>
           <li><a href="https://www.flickr.com/photos/paddymurphy">Flickr</a></li>
